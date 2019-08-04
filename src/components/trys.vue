@@ -9,7 +9,7 @@
     <div class="weui_actionsheet_menu" :class="{'weui_actionsheet_toggle': show}">
       <div class="weui_actionsheet_cell"
            v-for="(text, key) in menus"
-           @click="emitEvent('on-click-menu', key)"
+           @click="emitEvent('on-click-menu', key)" :key=key
            v-html="text">
       </div>
       <div class="vux-actionsheet-gap" v-if="showCancel"></div>
